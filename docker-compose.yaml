@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+    simplenodemysqlapp:
+      image: yusidris/app-tier:1.0
+      ports:
+        - 4000:4000
+    client:
+      image: yusidris/webtier:1.0
+      ports:
+        - 3000:3000
+      depends_on:
+        - simplenodemysqlapp

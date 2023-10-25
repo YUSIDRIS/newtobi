@@ -1,6 +1,6 @@
 FROM node:latest
 WORKDIR /usr/src/new
-COPY package.json .
+COPY app-tier/package.json .
 RUN npm install
 COPY . .
 EXPOSE 4000

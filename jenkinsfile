@@ -11,14 +11,7 @@ pipeline {
                 }
             }
         }
-        stage("build app") {
-            steps {
-                script {
-                    echo "building app"
-                    gv.buildfile()
-                }
-            }
-        }
+      
         stage("build image") {
             steps {
                 script {

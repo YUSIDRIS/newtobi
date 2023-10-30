@@ -1,6 +1,6 @@
 FROM node:latest
 WORKDIR /react-app/
-COPY package.json .
+COPY web-tier/package.json .
 RUN npm cache clean --force
 RUN npm install
 COPY .  .

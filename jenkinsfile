@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs 'node'
+        nodejs 'yarn'
     }
     stages {
         stage("init") {
@@ -12,7 +12,15 @@ pipeline {
             }
         }
       
-        stage("build image") {
+        stage("build app") {
+            steps {
+                script {
+                    echo "building app"
+                    sh 'yarn install'
+                }
+            }
+        }
+       stage("build image") {
             steps {
                 script {
                     echo "building image"
@@ -20,6 +28,6 @@ pipeline {
                 }
             }
         }
-        
+
     }   
 }

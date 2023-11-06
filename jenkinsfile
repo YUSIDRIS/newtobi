@@ -12,14 +12,6 @@ pipeline {
             }
         }
       
-        stage("build app") {
-            steps {
-                script {
-                    echo "building app"
-                    sh 'npm install'
-                }
-            }
-        }
        stage("build image") {
             steps {
                 script {

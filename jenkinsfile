@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     echo "building app"
-                    sh 'yarn install'
+                    sh 'npm install'
                 }
             }
         }
